@@ -1,0 +1,42 @@
+header
+.donate
+  .container
+    .row
+      h1.donate__title {{App.donate.title}}
+    .row
+      .donate__main
+        .row.donate__main__block
+          .donate__main__block__paragraph.col-sm-8 {{App.donate.description1}}
+          .donate__main__block__item.col-sm-4
+            .donate__main__block__item__donate
+              form(action="https://www.paypal.com/cgi-bin/webscr" method="post")
+                input(type="hidden" name="cmd" value="_donations")
+                input(type="hidden" name="business" value="tyler.tran@seo-vietnam.org")
+                input(type="hidden" name="lc" value="US")
+                input(type="hidden" name="item_name" value="SEO-Vietnam")
+                input(type="hidden" name="no_note" value="0")
+                input(type="hidden" name="currency_code" value="USD")
+                input(type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest")
+                input(type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!")
+                img(alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1")
+        .donate__main__image
+          img(src="{{App.donate.image}}" alt="")
+        .row.donate__main__block
+          .col-sm-8
+            .donate__main__block__paragraph {{App.donate.description2}}
+            .donate__main__block__payment
+              ul
+                li(ng-repeat="payment in App.donate.payment")
+                  div(ng-switch="payment.type")
+                    .donate__main__block__payment__item(ng-switch-when="1") {{payment.name}}
+                    .donate__main__block__payment__item(ng-switch-when="2")
+                      a(href="{{payment.link}}" target="_blank") {{payment.name}}
+                    .donate__main__block__payment__item(ng-switch-when="3") {{payment.name}}
+                      .donate__main__block__payment__item__line--container
+                        .donate__main__block__payment__item__line(ng-repeat="line in payment.lines track by $index")
+                          | {{line}}
+            h4.donate__main__block__paragraph.donate__main__block__paragraph--bold {{App.donate.description3}}
+          .donate__main__block__item.col-sm-4
+            .donate__main__block__item__video
+              iframe(src="{{videoSrc}}" frameborder="0" allowfullscreen)
+footer

@@ -1,0 +1,19 @@
+extends _about-us.jade
+block page-body
+  .row
+    .about-us__vision-mission
+      .about-us__vision-mission__item.col-xs-12
+        h2.about-us__vision-mission__item__title Vision
+        .about-us__vision-mission__item__line {{App.aboutUs.vision}}
+    .about-us__vision-mission
+      .about-us_vision-mission__item.col-xs-12
+        h2.about-us__vision-mission__item__title Mission
+        .about-us__vision-mission__item__line(ng-repeat="line in App.aboutUs.mission")
+          p {{line}}
+  .row
+    .about-us__values
+      h2.about-us__values__title Values
+      .about-us__values__item.col-xs-12(ng-repeat="item in App.aboutUs.values")
+        .row
+          h4.about-us__values__item__title.col-sm-4 {{item.title}}
+          .about-us__values__item__content.col-sm-8 {{item.text}}

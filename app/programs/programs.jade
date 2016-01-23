@@ -1,0 +1,42 @@
+header
+.programs
+  .container
+    .row
+      h1.programs__title {{App.program.title}}
+    .row
+      aside.col-xs-3
+        .row.side-bar
+          .side-bar__item(ng-repeat="item in menuFilters")
+            a(href="{{item.link}}")
+              h4(ng-class="{'side-bar__item--active': item.active}").side-bar__item__title {{item.title}}
+            .side-bar__item__branch--container-display
+              .side-bar__item__branch(ng-repeat="subItem in item.items")
+                a(href="{{subItem.link}}")
+                 p(ng-class="{'side-bar__item--active': subItem.active}") {{subItem.title}}
+      main.col-xs-9
+        .row.programs__main
+          .programs__main__block
+            img.programs__main__block__img(src="{{App.program.content.globalPresence.image}}" alt="")
+            .programs__main__block--container
+              .programs__main__block__left.col-sm-5
+                .programs__main__block__line(ng-repeat="line in App.program.content.globalPresence.description")
+                  | {{line}}
+              .programs__main__block__right.col-sm-7
+                img.programs__main__block__img(src="{{App.program.content.globalPresence.statisticImage}}" alt="")
+    section.programs__main__components
+      h2.programs__main__components__head-title {{App.program.content.components.title}}
+      .programs__main__components__item(ng-repeat="item in App.program.content.components.items")
+        .row
+          h3.programs__main__components__item__title.col-xs-5 {{item.title}}
+          .programs__main__components__item__content.col-xs-7
+            .programs__main__components__item__content__first-line(ng-show="item.introduction")
+              p {{item.introduction}}
+            .programs__main__components__item__content__line(ng-repeat="line in item.lines track by $index")
+              p {{line}}
+            .row
+              .programs__main__components__item__content__image.col-sm-6(ng-repeat="img in item.images track by $index")
+                img(src="{{img}}" alt="")
+    .programs__main__speech
+      h6.programs__main__speech__text "{{App.program.content.speech.text}}"
+      .programs__main__speech__owner {{App.program.content.speech.owner}}
+footer

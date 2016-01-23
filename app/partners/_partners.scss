@@ -1,0 +1,24 @@
+.partners {
+  padding-top: 100px;
+  @media (min-width: $screen-desktop) {
+    padding-top: 110px;
+  };
+  //padding-bottom: 50px;
+  //background-color: $very-light-gray;
+  .container {
+    background-color: white;
+  }
+  &__title {
+    padding-top: 20px;
+    text-align: center;
+    color: $green;
+    font-size: $page-title-size;
+  }
+
+  &__main {
+    border-left: 2px solid $very-light-gray;
+    min-height: 800px;
+    margin-bottom: 50px;
+  }
+
+}

@@ -1,0 +1,121 @@
+header
+.container
+  .apply
+    .row.apply__banner
+      .apply__banner__bg
+      .apply__banner__content
+        h1.apply__banner__title.col-xs-12 {{App.apply.title}}
+        .apply__banner__content__left.col-xs-6
+          .apply__banner__content__left--factor
+            .apply__banner__content__left__hozirontal-line
+            h3.apply__banner__content__left__title {{App.apply.left.fact1.title}}
+            .apply__banner__content__left__description {{App.apply.left.fact1.description}}
+          .apply__banner__content__left--factor
+            .apply__banner__content__left__hozirontal-line
+            h3.apply__banner__content__left__title {{App.apply.left.fact2.title}}
+            .apply__banner__content__left__description {{App.apply.left.fact2.description}}
+            .apply__banner__content__left__link
+              a(href="/about-us") &#8594;&nbsp&nbsp{{App.button.learnMore}}
+        .apply__banner__content__right.col-xs-6
+          h3.apply__banner__content__right__title {{App.apply.right.title}}
+          .apply__banner__content__right__event(ng-repeat="event in App.apply.right.events")
+            p {{event.date}}:&nbsp{{event.name}}
+            p {{event.location}}
+          .apply__banner__content__right__deadline
+            p {{App.apply.right.deadline.date}}:&nbsp{{App.apply.right.deadline.description}}
+          .btn.apply__banner__content__right__button
+            a(href="http://apply.seo-vietnam.org/Account/Login")
+              span {{App.button.startMyApplication}}
+    .apply__process
+      .row
+        .col-sm-4
+          .apply__process__table__title.apply__process__table__title--right
+            h3 {{App.apply.process.title}}
+        .apply__process__table.col-sm-6
+          table.table.table-bordered
+            tr(ng-repeat="round in App.apply.process.rounds")
+              td.apply__process__table__cell--name {{round.name}}
+              td.apply__process__table__cell--time {{round.time}}
+      .row
+        .col-xs-12.apply__process__paragraph
+          h2 {{App.apply.process.paragraph.title}}
+          p {{App.apply.process.paragraph.firstLine}}
+          p {{App.apply.process.paragraph.content}}
+          .apply__process__paragraph__horizontal-line
+    .apply__carousel
+      .row
+        .owl-carousel.apply__carousel--container
+          .apply__carousel__item
+            .apply__carousel__item__left.col-xs-4
+              img.apply__carousel__item__left__bg(src="/assets/images/apply/Van-Bui.jpg")
+            .apply__carousel__item__right.col-xs-8
+              .apply__carousel__item__right__text
+                p "About SEO-Vietnam, what can I say? SEO-Vietnam really gave me the summer of my life and I could not have asked for more. The time I spent with my mentors and peers was priceless. We came from different backgrounds and fate let our paths cross this summer. I will never forget all “getaway” trips, all the heart-to-heart talks, all the kind and encouraging words, all the hugs and tears. Thank you SEO-Vietnam!"
+              .apply__carousel__item__right__footer
+                p Van Bui, SEO-V'11
+                p London School of Economics'13, Interned at Viet Thai International
+          .apply__carousel__item
+            .apply__carousel__item__left.col-xs-4
+              img.apply__carousel__item__left__bg(src="/assets/images/apply/Nam.jpg")
+            .apply__carousel__item__right.col-xs-8
+              .apply__carousel__item__right__text
+                p "As an SEO-Vietnam intern, my summer in 2011 was filled with not just professional experience at VISA Inc. but a broad network of leading employers in Vietnam, great mentorship and peer learning, as well as deep sense of community service. Through the summer, SEO-Vietnam shaped my career path in finance by stirring up my interest in investment and offering me employment opportunities at its partner firms namely VinaCapital and Vietnam Investments Group."
+              .apply__carousel__item__right__footer
+                p Nam Nguyen, SEO-V'11
+                p Foreign Trade University'11, Interned at Visa
+          .apply__carousel__item
+            .apply__carousel__item__left.col-xs-4
+              img.apply__carousel__item__left__bg(src="/assets/images/apply/An-Pho.jpg")
+            .apply__carousel__item__right.col-xs-8
+              .apply__carousel__item__right__text
+                p "The one thing you love most about SEO is its people. I have never met that many great and intellectual people in that short amount of time before. We didn't only know each other, but we created a bond that sincerely connects us even stronger after the program ended. I think you can find internships at many companies through connections or on your own. However, having a network with many innovative and talented people to experience challenges and working on meaningful projects together is indeed priceless."
+              .apply__carousel__item__right__footer
+                p An Pho, SEO-V'15
+                p Soka University of America'14, Interned at VinaCapital (Lotus Impact fund)
+          .apply__carousel__item
+            .apply__carousel__item__left.col-xs-4
+              img.apply__carousel__item__left__bg(src="/assets/images/apply/Julie-Hoang.jpg")
+            .apply__carousel__item__right.col-xs-8
+              .apply__carousel__item__right__text
+                p "What was most meaningful and unique about SEO-Vietnam is the powerful network it has to offer. SEO-Vietnam gave me the opportunity to meet the founders, executive officers and other high-profile, successful individuals in Vietnam and learn from their experience, either via the Summer Seminars or small dinner/coffee chat organized by staff and interns. I was also able to learn from the rest of my intern class and other SEO-Vietnam alumni, who are among the brightest and passionate young Vietnamese leaders. It felt powerful but also humbled to be a part of this network, and I knew that one day in the future when I come back to contribute to the development of my country, I will know exactly where to find the talents and passions that I need."
+              .apply__carousel__item__right__footer
+                p Julie Hoang, SEO-V'11
+                p University of Pennsylvania'12, Interned at Horizon
+          .apply__carousel__item
+            .apply__carousel__item__left.col-xs-4
+              img.apply__carousel__item__left__bg(src="/assets/images/apply/Daniel-Su.jpg")
+            .apply__carousel__item__right.col-xs-8
+              .apply__carousel__item__right__text
+                p "I joined SEO family in summer 2012 and it was the most amazing summer I have ever had. As an engineer by training, I used to think that my career path would only talk to machine and software. However, my mind-set had been changed totally when I did my internship with Asia Commercial Bank. The internship was a real challenge for a student with zero banking experience like me but that was the time when I learnt the most. I learnt to put myself out of my comfort zone, to better manage time and to perform under pressure. In addition, SEO equipped me with essential finance & banking knowledge throughout the intensive training, which helped me to complete my internship successfully. Besides, the network of SEO had significantly influenced my way of thinking and career planning. Until now, I still keep in touch with many SEO people and I believe it is a long lasting relationship I have."
+              .apply__carousel__item__right__footer
+                p Daniel Su, SEO-V'12
+                p Nanyang Technological University'13, Interned at ACB
+
+          .apply__carousel__item
+            .apply__carousel__item__left.col-xs-4
+              img.apply__carousel__item__left__bg(src="/assets/images/apply/Hang-Tran.jpg")
+            .apply__carousel__item__right.col-xs-8
+              .apply__carousel__item__right__text
+                p "I was fortunate enough to have a remarkable summer internship at Yola. In 2 months, I participated in organizing 2 big marketing campaigns and a center expansion research. On top of the internship, attending speakers seminars, talking to my mentors, and sharing my summer with all other wonderful SEO-V members made this summer one of the best experiences I’ve ever had. For me, it was a once-in-a-lifetime chance to challenge myself, to overcome difficulties, to achieve something in life, and to grow!"
+              .apply__carousel__item__right__footer
+                p Hang Tran, SEO-V'11
+                p Cornell College'13, Interned at Yola
+          .apply__carousel__item
+            .apply__carousel__item__left.col-xs-4
+              img.apply__carousel__item__left__bg(src="/assets/images/apply/Hieu-Nguyen.jpg")
+            .apply__carousel__item__right.col-xs-8
+              .apply__carousel__item__right__text
+                p "SEO-Vietnam did not only give me the greatest opportunity to intern at PwC, to have the most rigorous yet rewarding training and many valuable discussions with people at leading business and non-profit organizations in Vietnam, to join the network that would empower me in many years to come, to know the most wonderful and interesting friends from all around the world that I never thought I would ever meet in my life, but also it transformed me at both personal and professional level."
+              .apply__carousel__item__right__footer
+                p Hieu Nguyen, SEO-V'11
+                p Dickinson College'13, Interned at PwC
+          .apply__carousel__item
+            .apply__carousel__item__left.col-xs-4
+              img.apply__carousel__item__left__bg(src="/assets/images/apply/Anh-Le.jpg")
+            .apply__carousel__item__right.col-xs-8
+              .apply__carousel__item__right__text
+                p "This is definitely the best internship I’ve had. As a college student, you don’t get the opportunity to present your investment ideas to senior managers and be questioned about them. I also developed great relationship with my colleagues who I am still often in touch today. My wonderful experience with the inaugural SEO-V class has prompted me to contribute to this program by helping organize its 2nd year in running."
+              .apply__carousel__item__right__footer
+                p Anh Le, SEO-V'09
+                p Dartmouth'10, Interned at Horizon
+footer

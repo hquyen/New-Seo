@@ -1,0 +1,74 @@
+include ../../components/mixins/common-grid/_common-grid.jade
+header
+.past-programs
+  .container
+    .row
+      h1.past-programs__title {{App.pastPrograms.title}}
+    .row.past-programs__content
+      aside.col-xs-4.col-sm-3
+        .row.side-bar
+          .side-bar__item(ng-repeat="item in menuFilters")
+            a(href="{{item.link}}")
+              h4(ng-class="{'side-bar__item--active': item.active}").side-bar__item__title {{item.title}}
+            .side-bar__item__branch--container-display
+              .side-bar__item__branch(ng-repeat="subItem in item.items")
+                a(href="{{subItem.link}}")
+                 p(ng-class="{'side-bar__item--active': subItem.active}") {{subItem.title}}
+      main.col-xs-8.col-sm-9
+        .row.past-programs__content__main
+          .past-programs__content__main__line {{App.pastPrograms.description.title}}
+          .past-programs__content__main__line {{App.pastPrograms.description.text}}
+      h2.col-xs-offset-3.col-xs-9.past-programs__timeline__title {{App.pastPrograms.timeline.title}}
+    .row
+      .col-xs-12.past-programs__timeline
+        .past-programs__timeline__chart
+          ul
+            li.past-programs__timeline__chart__item(ng-repeat="item in App.pastPrograms.timeline.chart")
+              .past-programs__timeline__chart__item__info
+                .past-programs__timeline__chart__item__info--container
+                  .past-programs__timeline__chart__item__info__line
+                    .past-programs__timeline__chart__item__info__line--number {{item.interns.count}}
+                    |&nbsp
+                    .past-programs__timeline__chart__item__info__line--subfix {{item.interns.subfix}}
+                  .past-programs__timeline__chart__item__info__line
+                    .past-programs__timeline__chart__item__info__line--number {{item.companies.count}}
+                    |&nbsp
+                    .past-programs__timeline__chart__item__info__line--subfix {{item.companies.subfix}}
+              .past-programs__timeline__chart__vertical-line
+
+        .past-programs__timeline__chart
+          ul
+            li.past-programs__timeline__chart__item(ng-repeat="item in App.pastPrograms.timeline.chart")
+              .past-programs__timeline__chart__item__year
+                a(href="#{{item.year}}") {{item.year}}
+    .row
+      .col-xs-12
+        .past-programs__instruction
+          h3.past-programs__instruction__title {{App.pastPrograms.instruction}}
+
+    .row.past-programs__history(ng-repeat="history in App.pastPrograms.histories")
+      .col-xs-12
+        .grid-container(id="{{history.year}}")
+          .container-fluid
+            .grid-container__item(ng-repeat="event in history.events")
+              div(ng-switch="event.type")
+                div(ng-switch-when="2")
+                  .row.two-grid__row
+                    .two-grid__cell.two-grid__cell--text.col-xs-12.col-sm-6.col-md-6.col-lg-6.no-gutter
+                      h3(ng-if="event.isFirst").two-grid__cell-header {{history.year}}
+                      p.two-grid__cell-body
+                        .two-grid__cell-body__text {{event.description}}
+                    .two-grid__cell.two-grid__cell--image.two-grid__cell--image-right.col-xs-12.col-sm-6.col-md-6.col-lg-6.no-gutter
+                      img(alt="" src="{{event.image}}")
+                div(ng-switch-when="3")
+                  .row.three-grid__row
+                    .three-grid__item.col-xs-4.no-gutter(ng-repeat="item in event.items")
+                      .three-grid__item__img
+                        img(src="{{item.image}}" alt="")
+                      .three-grid__item__description {{item.description}}
+                div(ng-switch-when="1")
+                  .row.one-grid__row
+                    .one-grid__item.col-xs-12.no-gutter
+                      h3(ng-if="event.isFirst").one-grid__item__header {{history.year}}
+                      .one-grid__item__description {{event.description}}
+footer

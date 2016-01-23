@@ -1,0 +1,68 @@
+.side-bar {
+  padding: 0 30px 0 15px;
+
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  &__item {
+    border-top: 2px solid black;
+    h4 {
+      margin-top: 15px;
+      font-family: $font-ls;
+    }
+    h1 {
+      font-family: $font-ls;
+    }
+    &__title {
+      text-transform: uppercase;
+      font-family: $font-ls;
+      font-size: 12px;
+      line-height: 12px;
+
+      @media (min-width: $screen-phone) {
+        font-size: 16px;
+        line-height: 18px;
+      }
+
+      @media (min-width: $screen-tablet) {
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      @media (min-width: $screen-desktop) {
+        font-size: 22px;
+        line-height: 24px;
+      }
+    }
+
+    &__branch {
+      font-family: $font-ls;
+      font-size: 12px;
+      @media (min-width: $screen-tablet) {
+        font-size: 14px;
+      }
+
+      @media (min-width: $screen-desktop) {
+        font-size: 16px;
+      }
+      &--container {
+        display: none;
+        padding-bottom: 15px;
+      }
+
+      &--container-display {
+        margin-bottom: 15px;
+      }
+    }
+
+    &--active {
+      color: $green;
+    }
+  }
+}

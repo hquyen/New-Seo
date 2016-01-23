@@ -1,0 +1,18 @@
+header
+.about-us
+  .container
+    .row
+      h1.about-us__title {{App.aboutUs.title}}
+    .row
+      aside.col-xs-3
+        .row.side-bar
+          .side-bar__item(ng-repeat="item in menuFilters")
+            a(href="{{item.link}}")
+              h4(ng-class="{'side-bar__item--active': isActive(item.active)}").side-bar__item__title {{item.title}}
+            .side-bar__item__branch--container-display
+              .side-bar__item__branch(ng-repeat="subItem in item.items")
+                a(href="{{subItem.link}}")
+                  p(ng-class="{'side-bar__item--active': subItem.active}") {{subItem.title}}
+      main.col-xs-9
+        block page-body
+footer

@@ -1,0 +1,99 @@
+﻿.spotlight{
+    //margin-top: 60px;
+    width:100%;
+    position:relative;
+    height:512px;
+    overflow:hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing:border-box;
+    color:white;
+
+    @media (min-width:$screen-desktop){
+        height:768px;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height:100%;
+        width: 100%;
+        background-image:url(/assets/images/home/spotlight.jpg);
+        background-position:center top;
+        background-repeat: no-repeat;
+        background-attachment:local;
+        z-index: -1;
+         @media (min-width:$screen-lg){
+            background-size:100% auto;
+
+        }
+    }
+
+    &__content {
+        margin-left: 20px;
+        @media(min-width: $screen-phone) {
+            margin-left: 60px;
+        }
+        @media(min-width: $screen-tablet) {
+            margin-left: 100px;
+        }
+
+        @media(min-width: $screen-desktop) {
+            margin-left: 180px;
+        }
+
+        position:absolute;
+        top:40%;
+        transform:translate3d(0, -40%,0);
+        width: 80%;
+
+        @media(min-width: $screen-desktop) {
+            width: 30%;
+        }
+
+        &__logo {
+            margin-bottom: 50px;
+        }
+
+        &__tag-line {
+            &__title {
+                text-transform:uppercase;
+                font-family: $font-ls;
+            }
+
+            &__description {
+                font-family: $font-light;
+                font-size:18px;
+                font-style: italic;
+            }
+
+            &__link {
+                margin-top: 100px;
+                a {
+                    position:absolute;
+                    text-decoration: underline;
+                    color: $light-gray;
+                    &:hover {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    &__link {
+        position:absolute;
+        bottom:30%;
+        width: 30%;
+        a {
+            position:absolute;
+            font-size:24px;
+            font-family: $font-medium;
+            font-weight: bold;
+            text-decoration: underline;
+            color: white;
+        }
+    }
+
+}

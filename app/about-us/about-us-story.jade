@@ -1,0 +1,9 @@
+extends _about-us.jade
+block page-body
+  .about-us__story
+    .about-us__story__image
+      img(src="{{App.aboutUs.chairman.image}}" alt="")
+      p {{App.aboutUs.chairman.text}}
+    .row.about-us__story__text
+      .about-us__story__text__line(ng-repeat="line in App.aboutUs.stories track by $index")
+        p {{line}}

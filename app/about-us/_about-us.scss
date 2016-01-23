@@ -1,0 +1,166 @@
+.about-us {
+  padding-top: 100px;
+  //background-color: $very-light-gray;
+  font-size: 12px;
+  line-height: 1.5;
+
+  @media (min-width: $screen-phone) {
+    font-size: 14px;
+  }
+
+  @media (min-width: $screen-tablet) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding-top: 110px;
+  };
+
+  &__vertical-line {
+    clear: both;
+    border-bottom: 1px solid;
+  }
+
+  .container {
+    background-color: white;
+  }
+  &__title {
+    padding: 20px 0 30px 0;
+    text-align: center;
+    color: $green;
+    font-size: $page-title-size;
+  }
+
+  &__story {
+    padding-bottom: 50px;
+    &__image {
+      float: left;
+      width: 40%;
+      img {
+        width: 95%;
+        height: auto;
+      }
+      p {
+        padding: 10px 0;
+        font-size: 12px;
+        @media (min-width: $screen-tablet) {
+          font-size: 14px;
+        }
+      }
+    }
+    &__text {
+      padding: 0 15px;
+      //float: left;
+      //width: 60%;
+      &__line {
+        p {
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  &__vision-mission {
+    overflow: auto;
+    padding-bottom: 50px;
+    &__item {
+      &__title {
+        text-align: center;
+        color: $green;
+        padding-bottom: 10px;
+      }
+      &__line {
+
+      }
+    }
+  }
+
+  &__values {
+    overflow: auto;
+    padding-bottom: 50px;
+    &__title {
+      text-align: center;
+      color: $green;
+    }
+
+    &__item {
+      padding-bottom: 25px;
+      &__title {
+        color: $green;
+        margin: 0;
+      }
+
+      &__content {
+
+      }
+    }
+  }
+
+  &__our-people {
+    overflow: auto;
+    padding-bottom: 50px;
+    &__title {
+      text-align: center;
+      color: $green;
+      padding-bottom: 10px;
+    }
+
+    &--container {
+      padding-bottom: 50px;
+      overflow: auto;
+    }
+
+    &__item {
+      min-height: 300px;
+      overflow: auto;
+      @media(min-width: $screen-phone) {
+        min-height: 350px;
+      }
+      &__title {
+        color: $green;
+        padding-bottom: 10px;
+        margin: 0;
+
+      }
+
+      &__img {
+        position: relative;
+        width: 100%;
+        height: 120px;
+        margin: 0 auto;
+        overflow: hidden;
+        @media(min-width: $screen-phone) {
+          height: 220px;
+        }
+        @media(min-width: $screen-tablet) {
+          height: 180px;
+        }
+        @media(min-width: $screen-desktop) {
+          height: 220px;
+        }
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      &__name {
+        font-size: 14px;
+        @media(min-width: $screen-phone) {
+          font-size: 16px;
+        }
+      }
+
+      &__description {
+        font-size: 12px;
+        @media(min-width: $screen-phone) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

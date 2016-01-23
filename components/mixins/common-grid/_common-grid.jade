@@ -1,0 +1,36 @@
+﻿mixin commondGrid(items, header, isTwo)
+  if isTwo
+     section.two-grid
+      .container-fluid
+       each item in items
+        .row.two-grid__row
+          .two-grid__cell.two-grid__cell--text.col-xs-12.col-sm-6.col-md-6.col-lg-6.no-gutter
+            if item.header
+              h3.two-grid__cell-header=header
+            p.two-grid__cell-body
+              .two-grid__cell-body__title=item.title
+              .two-grid__cell-body__text=item.descriptions
+          .two-grid__cell.two-grid__cell--image.two-grid__cell--image-right.col-xs-12.col-sm-6.col-md-6.col-lg-6.no-gutter
+            img(alt="")&attributes({src:item.img})
+  else
+    section.three-grid
+      .container-fluid
+         each item in items
+           .row.three-grid__row
+             .three-grid__item.col-xs-4.no-gutter
+                .three-grid__item__img
+                  img(src="http://placehold.it/400x500?text=Image" alt="")
+                .three-grid__item__title item.title
+                .three-grid__item__description Lorem ipsum dolor sit amet, etusu fabulas vocibus, assum fa-bellas sensibus est te. Et pri im-pedit rationibus, modo.
+             .three-grid__item.col-xs-4.no-gutter
+                .three-grid__item__img
+                  img(src="http://placehold.it/400x500?text=Image" alt="")
+                .three-grid__item__title Title Something
+                .three-grid__item__description Lorem ipsum dolor sit amet, etusu fabulas vocibus, assum fa-bellas sensibus est te. Et pri im-pedit rationibus, modo.
+             .three-grid__item.col-xs-4.no-gutter
+                .three-grid__item__img
+                  img(src="http://placehold.it/400x500?text=Image" alt="")
+                .three-grid__item__title Title Something
+                .three-grid__item__description Lorem ipsum dolor sit amet, etusu fabulas vocibus, assum fa-bellas sensibus est te. Et pri im-pedit rationibus, modo.
+
+

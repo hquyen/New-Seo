@@ -1,0 +1,27 @@
+.container
+  .row
+    .header__content
+      .header__content__logo.col-xs-2
+        a(href="/")
+          img(src="/assets/images/logo/SEO_Vietnam.jpg")
+      .header__content__menu.col-xs-10
+        .header__content__menu__line-1
+          a(href="http://apply.seo-vietnam.org/Account/Login")
+            {{App.pageMenu.login}}
+        .header__content__menu__line-2
+          .row
+            .header__content__menu__line-2__item.col-xs-4.col-sm-2
+              a(href="{{App.pageMenu.item1.link}}")
+                h3(ng-class="{'header__content__menu--active': isActive(App.pageMenu.item1.name)}") {{App.pageMenu.item1.name}}
+            .header__content__menu__line-2__item.col-xs-4.col-sm-2
+              a(href="{{App.pageMenu.item2.link}}" ng-class="{'header__content__menu--active': isActive(App.pageMenu.item2.name)}")
+                h3(ng-class="{'header__content__menu--active': isActive(App.pageMenu.item2.name)}") {{App.pageMenu.item2.name}}
+            .header__content__menu__line-2__item.col-xs-4.col-sm-2
+              a(href="{{App.pageMenu.item3.link}}" ng-class="{'header__content__menu--active': isActive(App.pageMenu.item3.name)}")
+                h3(ng-class="{'header__content__menu--active': isActive(App.pageMenu.item3.name)}") {{App.pageMenu.item3.name}}
+            .header__content__menu__line-2__item.col-xs-4.col-sm-2
+              a(href="{{App.pageMenu.item4.link}}" ng-class="{'header__content__menu--active': isActive(App.pageMenu.item4.name)}")
+                h3(ng-class="{'header__content__menu--active': isActive(App.pageMenu.item4.name)}") {{App.pageMenu.item4.name}}
+            .header__content__menu__line-2__item.col-xs-4.col-sm-2
+              a(href="{{App.pageMenu.item5.link}}" ng-class="{'header__content__menu--active': isActive(App.pageMenu.item5.name)}")
+                h3(ng-class="{'header__content__menu--active': isActive(App.pageMenu.item5.name)}") {{App.pageMenu.item5.name}}

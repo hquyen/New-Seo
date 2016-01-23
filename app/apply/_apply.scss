@@ -1,0 +1,332 @@
+.apply {
+  $padding-section: 50px;
+  padding-top: 160px;
+  @media (min-width: $screen-desktop) {
+    padding-top: 215px;
+  };
+  font-size: 12px;
+  @media(min-width: $screen-phone) {
+    font-size: 16px;
+  }
+  &__banner{
+    color: white;
+    overflow: auto;
+    position: relative;
+    min-height: 600px;
+    &__bg {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      min-height: 600px;
+      background-image:url(/assets/images/apply/spotlight.jpg);
+      background-position:center top;
+      background-repeat: no-repeat;
+    }
+
+    &__title {
+      text-align: center;
+      margin-bottom: 10px;
+      @media(min-width: $screen-tablet) {
+        margin-bottom: 30px;
+      }
+    }
+    &__content {
+      padding: 5px;
+      @media(min-width: $screen-tablet) {
+        padding: 30px;
+      }
+      &__left {
+        text-align: center;
+        padding: 0;
+        @media(min-width: $screen-tablet) {
+          padding: 0 20px;
+        }
+
+        @media(min-width: $screen-desktop) {
+          padding: 0 50px;
+        }
+
+        @media(min-width: $screen-laptop) {
+          padding: 0 100px;
+        }
+        &--factor {
+          margin-bottom: 10px;
+          @media(min-width: $screen-phone) {
+            margin-bottom: 25px;
+          }
+        }
+        &__hozirontal-line {
+          display: inline-block;
+          border-bottom: 1px solid;
+          width: 50px;
+          text-align: center;
+        }
+        &__title {
+          font-weight: bold;
+        }
+        &__description {
+
+        }
+
+        &__link {
+          margin-top: 10px;
+          font-size: 14px;
+          @media(min-width: $screen-phone) {
+            margin-top: 20px;
+          }
+          a {
+            text-decoration: none;
+            color: white;
+            &:hover {
+              font-weight: bold;
+            }
+          }
+
+        }
+      }
+      &__right {
+        text-align: center;
+        padding: 0;
+        @media(min-width: $screen-phone) {
+          padding: 0 20px;
+        }
+        @media(min-width: $screen-desktop) {
+          padding: 0 50px;
+        }
+
+        @media(min-width: $screen-laptop) {
+          padding: 0 100px;
+        }
+
+        &__title {
+          margin-top: 41px;
+          font-weight: bold;
+        }
+        &__event {
+          p {
+            font-family: $font-medium;
+
+          }
+        }
+        &__deadline {
+          p {
+            font-family: $font-bold;
+            letter-spacing:0.5px;
+          }
+        }
+        &__button {
+          margin-top: 10px;
+          font-size: 14px;
+          border: 1px solid white;
+          letter-spacing: 1px;
+
+          @media(min-width: $screen-tablet) {
+            margin-top: 20px;
+            font-size: 16px;
+            border: 2px solid white;
+          }
+
+          &:hover {
+            border: 2px solid white;
+            @media(min-width: $screen-phone) {
+              border: 3px solid white;
+            }
+          }
+          a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  &__process {
+    padding: 15px 15px 0 15px;
+    @media(min-width: $screen-phone) {
+      padding: $padding-section $padding-section 0 $padding-section;
+    }
+    &__table {
+      &__title {
+        padding-right: 0;
+        @media(min-width: $screen-phone) {
+          padding: 40px 0 20px 0;
+        }
+        &--right {
+          float: none;
+          @media(min-width: $screen-tablet) {
+            float: right;
+          }
+        }
+        h3 {
+          text-align: center;
+          color: $green;
+          font-weight: bold;
+          @media(min-width: $screen-tablet) {
+            display: table-caption;
+            text-align: right;
+          }
+        }
+      }
+
+      table {
+        width: 100%;
+        text-align: center;
+        tr td {
+          padding: 15px;
+        }
+      }
+
+      &__cell {
+        &--name {
+          width: 30%;
+        }
+        &--time {
+          width: 70%;
+        }
+      }
+    }
+
+    &__paragraph {
+      padding-top: 20px;
+      text-align: center;
+      p {
+        width: 80%;
+        padding-left: 15%;
+        @media(min-width: $screen-tablet) {
+        width: 70%;
+        padding-left: 30%;
+      }
+      &__horizontal-line {
+        display: inline-block;
+        border-bottom: 1px solid;
+        width: 40%;
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__carousel {
+      padding: 50px;
+      @media(min-width: $screen-phone) {
+        padding: $padding-section;
+      }
+      .row {
+        margin: 0;
+        padding: 0 50px;
+
+      }
+      &--container {
+        position: relative;
+      }
+
+      .owl-nav {
+        position: absolute;
+        top: 5%;
+        width: 100%;
+
+        @media(min-width: $screen-desktop) {
+          top: 25%;
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+          &:hover {
+            color: $very-light-gray;
+          }
+        }
+        .owl-prev{
+          display: inline-block;
+          position: absolute;
+          left: -100px;
+          height: 100px;
+          padding-top: 20px;
+          width: 50px;
+          vertical-align: middle;
+          background-color: $green;
+        }
+
+        .owl-next {
+          display: inline-block;
+          position: absolute;
+          padding-top: 20px;
+          right: -100px;
+          height: 100px;
+          width: 50px;
+          background-color: $green;
+        }
+      }
+
+      &__item {
+        &__left {
+          min-height: 200px;
+          padding: 0;
+          &__bg {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        &__right {
+          min-height: 130px;
+          padding: 0 0 0 $padding-section/4;
+          position: relative;
+          font-size: 14px;
+          @media(min-width: $screen-desktop) {
+            min-height: 190px;
+            font-size: 15px;
+          }
+          @media(min-width: $screen-laptop) {
+            min-height: 230px;
+            padding: $padding-section/2 0 0 $padding-section/2;
+          }
+          &__text {
+            text-align: center;
+            font-style: italic;
+            display: block; /* Fallback for non-webkit */
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            p {
+              margin: 0;
+            }
+            @media(min-width: $screen-desktop) {
+              -webkit-line-clamp: 6;
+            }
+            @media(min-width: $screen-laptop) {
+              -webkit-line-clamp: 7;
+            }
+          }
+          &__footer {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            font-size: 13px;
+            p {
+              margin: 0;
+              text-align: right;
+              display: block; /* Fallback for non-webkit */
+              display: -webkit-box;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+            @media(min-width: $screen-desktop) {
+              -webkit-line-clamp: 2;
+              font-size: 14px;
+            }
+          }
+        }
+
+        &__link {
+          font-size: 50px;
+        }
+      }
+  }
+}
+}

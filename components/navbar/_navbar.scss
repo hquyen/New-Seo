@@ -1,0 +1,13 @@
+.nar-bar {
+  &--right {
+    float: right;
+    padding-top: 2px;
+  }
+  &--left {
+    float: left;
+    padding-top: 2px;
+  }
+  &--center {
+    text-align: center;
+  }
+}

@@ -1,0 +1,250 @@
+.home-page {
+  background-color: white;
+  &__content {
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    background-color: $light-gray;
+    margin-bottom: 70px;
+
+
+    &__company-mission {
+      overflow: auto;
+      background-color: white;
+      margin: 10px 0 10px 20px;
+      border-top: 5px solid $green;
+      border-left: 5px solid $green;
+      border-bottom: 5px solid $green;
+
+      @media(min-width: $screen-phone) {
+        margin: 40px 0 40px 60px;
+      }
+
+      @media(min-width: $screen-tablet) {
+        margin: 70px 0 70px 100px;
+      }
+
+      @media(min-width: $screen-desktop) {
+        margin: 100px 0 100px 270px;
+      }
+
+      &__content {
+        color: $green;
+        text-align: center;
+        font-size: 14px;
+
+        line-height: 1.4;
+        padding: 20px 0 20px 10px;
+        width: 80%;
+        float: left;
+
+        @media(min-width: $screen-phone) {
+          font-size: 15px;
+          width: 66%;
+        }
+
+        @media(min-width: $screen-tablet) {
+          padding: 50px 0 50px 35px;
+          font-size: 21px;
+        }
+
+        @media(min-width: $screen-desktop) {
+          padding: 100px 0 100px 70px;
+          font-size: 25px;
+        }
+
+        &__title {
+          font-weight: bold;
+        }
+        &__description {
+
+        }
+
+        &__link {
+          margin-top: 30px;
+          font-weight: bold;
+          letter-spacing: 1px;
+          color: white;
+          background-color: $green;
+          border-color: $green;
+          &:hover {
+            color: white;
+            background-color: $light-green;
+            border-color: $light-green;
+          }
+        }
+      }
+    }
+
+    &__partners {
+      font-family: $font-pd;
+      background-color: white;
+      padding: 20px 20px;
+      overflow: auto;
+
+      @media(min-width: $screen-phone) {
+        padding: 30px 60px;
+      }
+
+      @media(min-width: $screen-tablet) {
+        padding: 40px 100px;
+      }
+
+      @media(min-width: $screen-desktop) {
+        padding: 50px 160px;
+      }
+
+      &__title {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 34px;
+        font-weight: bold;
+        color: $green;
+      }
+      &__details {
+        &__text {
+          font-size: 17px;
+          line-height: 25px;
+
+          @media(min-width: $screen-desktop) {
+          font-size: 25px;
+          line-height: 28px;
+          }
+
+          &--link {
+            margin: 25px 0;
+            a {
+              text-decoration: none;
+              color: black;
+              &:hover {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+
+      &__branches {
+        &__title {
+          text-align: center;
+          font-weight: bold;
+          margin: 30px 0 40px 0;
+          &--gold {
+            font-size: 26px;
+          }
+
+          &--silver {
+            font-size: 24px;
+          }
+        }
+
+        &__item {
+          padding-bottom: 25px;
+          &__logo {
+            border: 1px solid $very-light-gray;
+            position: relative;
+            width: 100%;
+            min-height: 250px;
+            margin: 0 auto;
+            overflow: hidden;
+
+            @media(min-width: $screen-phone) {
+              min-height: 350px;
+            }
+
+            @media(min-width: $screen-tablet) {
+              min-height: 230px;
+
+            }
+            @media(min-width: $screen-desktop) {
+              min-height: 200px;
+            }
+
+            @media(min-width: $screen-very-lg-desktop) {
+              min-height: 300px;
+            }
+            //@media (min-width: $screen-tablet) {
+            //  height: 150px;
+            //}
+            //
+            //@media (min-width: $screen-desktop) {
+            //  height: 180px;
+            //}
+
+            &__img {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 90%;
+              height: auto;
+            }
+          }
+        }
+        display: inline;
+        img {
+          width: 80%;
+          height: auto;
+          @media(min-width: $screen-phone) {
+            width: 70%;
+
+          }
+          @media(min-width: $screen-desktop) {
+            width: 80%;
+          }
+        }
+      }
+    }
+
+    &__img {
+      position: absolute;
+      top: 220px;
+      right: -30%;
+      @media(min-width: $screen-phone) {
+        top: 180px;
+        right: -20%;
+      }
+      @media(min-width: $screen-tablet) {
+        top: 250px;
+        right: -20%;
+      }
+      @media(min-width: $screen-desktop) {
+        top: 250px;
+        right: -10%;
+      }
+
+      @media(min-width: $screen-very-lg-desktop) {
+        top: 250px;
+        right: -8%;
+      }
+
+      img {
+        width: 200px;
+        height: 200px;
+
+        @media(min-width: $screen-phone) {
+          width: 300px;
+          height: 300px;
+        }
+
+        @media(min-width: $screen-tablet) {
+          width: 350px;
+          height: 350px;
+        }
+        @media(min-width: $screen-desktop) {
+          width: 500px;
+          height: 500px;
+        }
+        @media(min-width: $screen-very-lg-desktop) {
+          width: 600px;
+          height: 600px;
+        }
+      }
+    }
+  }
+}
+
+
+.min-height {
+  min-height: 800px;
+}

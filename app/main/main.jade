@@ -1,0 +1,32 @@
+main-header
+include ./spotlight.jade
+section.main-body
+  .home-page
+    .home-page__content
+      .home-page__content__company-mission
+        .home-page__content__company-mission__content
+          h3.home-page__content__company-mission__content__title {{App.home.company.title}}
+          .home-page__content__company-mission__content__description {{App.home.company.description}}
+          a(href="/programs")
+            .btn.home-page__content__company-mission__content__link {{App.button.learnMore}}
+
+      .home-page__content__partners
+        h3.home-page__content__partners__title {{App.home.partner.title}}
+        .row
+          .home-page__content__partners__details.col-xs-12
+            .home-page__content__partners__details__text {{App.home.partner.description}}
+              .home-page__content__partners__details__text--link
+                a(href="/partners") &#8592; {{App.button.detail}}
+        .row
+          .home-page__content__partners__branches
+            h4.home-page__content__partners__branches__title.home-page__content__partners__branches__title--gold.col-xs-12 Gold Partners
+            .home-page__content__partners__branches__item.col-xs-12.col-sm-6.col-md-3(ng-repeat="img in App.home.partner.golds track by $index")
+              .home-page__content__partners__branches__item__logo
+                img.home-page__content__partners__branches__item__logo__img(src="{{img}}" alt="")
+            h4.home-page__content__partners__branches__title.home-page__content__partners__branches__title--silver.col-xs-12 Silver Partners
+            .home-page__content__partners__branches__item.col-xs-12.col-sm-6.col-md-3(ng-repeat="img in App.home.partner.silvers track by $index")
+              .home-page__content__partners__branches__item__logo
+                img.home-page__content__partners__branches__item__logo__img(src="{{img}}" alt="")
+      .home-page__content__img
+              img(src="/assets/images/home/com-mission.png" alt="")
+footer

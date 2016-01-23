@@ -1,0 +1,32 @@
+header
+.partners
+  .container
+    .row
+      h1.partners__title {{App.partners.title}}
+    .row
+      aside.col-xs-4.col-sm-3
+        .row.side-bar
+          a(href="#" ng-click="filter('all', $event)")
+            h4.side-bar__item__title.side-bar__item--active {{App.partners.sideBarTitle}}
+          .side-bar__item(ng-repeat="item in menuFilters")
+            a(href="#" ng-click="filter(item.title, $event)")
+              h4.side-bar__item__title {{item.title}}
+            .side-bar__item__branch--container
+              .side-bar__item__branch(ng-repeat="gold in item.items.golds")
+                | {{gold.name}}
+              .side-bar__item__branch(ng-repeat="silver in item.items.silvers")
+                | {{silver.name}}
+              .side-bar__item__branch(ng-repeat="normal in item.items.normals")
+                | {{normal.name}}
+      main.col-xs-8.col-sm-9
+        .row.partners__main
+          .branch-grid
+            .row
+              .branch-grid__item.col-sm-4.col-md-3(ng-repeat="item in branches")
+                .branch-grid__item__logo--container
+                  .branch-grid__item__logo
+                    img.branch-grid__item__logo__img(src="/assets/images/logo/{{item.logo}}" alt="")
+                    .branch-grid__item__logo__content
+                      h3.branch-grid__item__logo__header {{item.name}}
+                      p.branch-grid__item__logo__body {{item.description}}
+footer

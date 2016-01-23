@@ -1,0 +1,68 @@
+header
+.momentum-program
+  .container
+    .row
+      h1.momentum-program__title {{App.momentumProgram.title}}
+    .row
+      aside.col-xs-3
+        .row.side-bar
+          .side-bar__item(ng-repeat="item in menuFilters")
+            a(href="{{item.link}}")
+              h4(ng-class="{'side-bar__item--active': item.active}").side-bar__item__title {{item.title}}
+            .side-bar__item__branch--container-display
+              .side-bar__item__branch(ng-repeat="subItem in item.items")
+                a(href="{{subItem.link}}")
+                 p(ng-class="{'side-bar__item--active': subItem.active}") {{subItem.title}}
+      main.col-xs-9
+        .row.momentum-program__main
+          .momentum-program__main__img
+            img(src="{{App.momentumProgram.content.image}}" alt="")
+    .row
+      .col-xs-12.col-sm-offset-3.col-sm-9
+        h2.momentum-program__main__title {{App.momentumProgram.content.title}}
+        .momentum-program__main__line__paragraph
+          ol.list-style-type--upper-roman
+            li
+              span.momentum-program__main__line__paragraph__h1 About
+              ol.list-style-type--upper-latin
+                li Momentum Development Program is a collaborative effort between Vietseed Foundation and Sponsors for Educational Opportunity in Vietnam (SEO-V). The program aims to promote independent youth, who can strive toward their life-time pursuits and become a catalyst of change. We execute our mission by equipping motivated students from underserved demographics with critical tools and skill set – through a holistic development program – enables them to achieve fulfilled career paths; then become sustainably independent.
+                li Our program consists of 5 pillars (1) Soft skill and English training, (2) Mentoring on career tracks, (3) Speaker Series, (4) Career Preparation and (5) Community Service.
+            li
+              span.momentum-program__main__line__paragraph__h1 Highlights
+              ol.list-style-type--upper-latin
+                li One of our highlights is Community Service in which students themselves initiate, plan, fund raising, recruit, and execute social-cause projects in in-need areas, e.g.: education, environment, and healthcare. This is not only a chance for them to thoroughly apply equipped skills into resolving real challenges, but also gratefully promote "pay it forward" spirit from which our students are the main beneficiaries from indispensable helps of sponsors, donors, and supporters
+                li In 2015, we have incubated 3 community projects. (3 logos are in logo folder)
+                  ol
+                    li Healthcare (upcoming): Cam Nang Benh Vien
+                    li Environment: A Tree - A friend
+                    li Education: Sai Gon - Chuyen Chua Ke
+            li
+              span.momentum-program__main__line__paragraph__h1 Requirements for Candidates
+              ol.list-style-type--upper-latin
+                li Demonstrated strong intellectual curiosity
+                li Under-served demographics
+                li Strong motivation for career success and to become a catalyst of change
+            li
+              span.momentum-program__main__line__paragraph__h1 Requirement and Application Process for Interested Education Foundations
+              ol.list-style-type--upper-latin
+                li We welcome all education foundations to explore partnership via leveraging our Development Program for their scholars
+                li Please contact us via email khanh.ngo@seo-vietnam.org (Mr. Khanh Ngo) for further information
+        .momentum-program__main__branch
+          .row
+            .momentum-program__main__branch--partner.col-xs-3
+              h4.momentum-program__main__branch__title {{App.momentumProgram.content.partner.title}}
+              .momentum-program__main__branch__logo
+                a(href="{{App.momentumProgram.content.partner.link}}")
+                  img.momentum-program__main__branch__logo__img.momentum-program__main__branch__logo__img--full-width(src="{{App.momentumProgram.content.partner.image}}" alt="")
+            .momentum-program__main__branch--projects.col-xs-9
+              h4.momentum-program__main__branch__title {{App.momentumProgram.content.projects.title}}
+              .row
+                .col-xs-4(ng-repeat="logo in App.momentumProgram.content.projects.logos track by $index")
+                  .momentum-program__main__branch__logo
+                    a(href="{{logo.link}}")
+                      img.momentum-program__main__branch__logo__img(src="{{logo.image}}" alt="")
+        .momentum-program__main__link
+          a(href="/partners")
+           |{{App.button.beAMomentumPartner}}&nbsp;&nbsp;
+           i.fa.fa-long-arrow-right
+footer

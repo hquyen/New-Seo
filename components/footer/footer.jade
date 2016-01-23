@@ -1,0 +1,24 @@
+.container
+  .footer__menu
+    ul
+      li
+        a(href="{{App.footer.item1.link}}") {{App.footer.item1.name}}
+      li
+        a(href="{{App.footer.item2.link}}") {{App.footer.item2.name}}
+      li
+        a(href="{{App.footer.item3.link}}") {{App.footer.item3.name}}
+      li
+        a(href="{{App.footer.item4.link}}") {{App.footer.item4.name}}
+      li
+        a(href="{{App.footer.item5.link}}") {{App.footer.item5.name}}
+  .footer__email
+    span Email:&nbsp;&nbsp;
+    a.footer__email__link(href="mailto:{{App.footer.email}}")
+      span {{App.footer.email}}
+  .footer__shares
+    a(href="http://facebook.com/seovie")
+      i.fa.fa-facebook-square
+    a(href="https://www.youtube.com/channel/UChjyPWxFmtRUxzjZ4XZk1yw")
+      i.fa.fa-youtube-square
+    a(href="#")
+      i.fa.fa-instagram
